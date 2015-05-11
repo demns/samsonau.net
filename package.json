@@ -14,10 +14,10 @@
     "scripts": {
         "test": "./node_modules/jshint/bin/jshint server.js",
         "start": "node server.js"
-    }
+    },
     "keywords": [
-    "samsonau"
-  ],
+        "samsonau"
+    ],
     "author": "Dzmitry Samsonau",
     "license": "MIT",
     "bugs": {
