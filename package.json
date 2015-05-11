@@ -1,0 +1,30 @@
+{
+    "name": "samsonau.net",
+    "version": "0.0.0",
+    "description": "My site",
+    "main": "server.js",
+    "scripts": {
+        "test": "test",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://demns@github.com/demns/samsonau.net.git"
+    },
+    "scripts": {
+        "test": "./node_modules/jshint/bin/jshint server.js",
+        "start": "node server.js"
+    }
+    "keywords": [
+    "samsonau"
+  ],
+    "author": "Dzmitry Samsonau",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/demns/samsonau.net/issues"
+    },
+    "homepage": "https://github.com/demns/samsonau.net",
+    "dependencies": {
+        "jshint": "^2.7.0"
+    }
+}
