@@ -1,5 +1,5 @@
 # samsonau.net
-Main development repo for mine website
+Main development repo for the website of mine
 
 #The technologies that will be used:
 
