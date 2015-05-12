@@ -5,8 +5,6 @@ Main development repo for the website of mine
 
 #The technologies that will be used:
 
-typescript
-
 sass
 
 angular.js
