@@ -16,3 +16,5 @@ redis (later)
 ecma6
 
 azure as http://azure.microsoft.com/en-us/documentation/articles/web-sites-nodejs-develop-deploy-mac/
+
+editorconfig
