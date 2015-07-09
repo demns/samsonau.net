@@ -7,10 +7,10 @@ Main development repo for the website of mine
 
 - [x] Deploying on Azure
 - [x] EditorConfig
-- [x] Sass
-- [x] AngularJS
-- [x] MongoDB
-- [x] Redis
-- [ ] ECMAScript 6 Features 
+- [ ] Sass
+- [ ] AngularJS
+- [ ] MongoDB
+- [ ] Redis
+- [ ] ECMAScript 6 Features
 
 
