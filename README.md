@@ -5,16 +5,12 @@ Main development repo for the website of mine
 
 #The technologies that will be used:
 
-sass
+- [x] Deploying on Azure
+- [x] EditorConfig
+- [x] Sass
+- [x] AngularJS
+- [x] MongoDB
+- [x] Redis
+- [ ] ECMAScript 6 Features 
 
-angular.js
 
-mongodb
-
-redis (later)
-
-ecma6
-
-azure as http://azure.microsoft.com/en-us/documentation/articles/web-sites-nodejs-develop-deploy-mac/
-
-editorconfig
