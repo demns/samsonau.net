@@ -31,22 +31,12 @@ gulp.task('default', function gulpDefault() {
 });
 
 gulp.task('nodemon', function() {
-  return $.nodemon({
-      script: './server.js',
-      ext: 'js es6 hbs',
-      watch: [
-        'dist'
-        ],
-      env: process.env,
-      stdout: false
-    })
-    .on('readable', function() {
-      this.stdout.on('data', function(chunk) {
-        if (/listening/.test(chunk)) {
-          $.livereload.reload();
-        }
-        process.stdout.write(chunk);
-      });
-      this.stderr.pipe(process.stderr);
-    });
-});
+  nodemon({
+    script: 'dist/server.js',
+    ext: 'js html',
+    env: {
+      'NODE_ENV': 'development'
+    },
+    tasks: ['default, sass']
+  }).on('restart', 'default')
+})
