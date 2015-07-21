@@ -26,6 +26,8 @@
   "devDependencies": {
     "bower": "^1.4.1",
     "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-nodemon": "^2.0.3",
     "gulp-sass": "^2.0.4"
   }
 }
