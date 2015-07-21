@@ -30,6 +30,13 @@ gulp.task('default', function gulpDefault() {
   );
 });
 
+gulp.task('travis', function gulpDefault() {
+  runSequence(
+    'start',
+    'sass'
+  );
+});
+
 gulp.task('nodemon', function() {
   nodemon({
     script: 'dist/server.js',
