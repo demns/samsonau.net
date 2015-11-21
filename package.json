@@ -19,6 +19,7 @@
     "url": "https://github.com/demns/samsonau.net/issues"
   },
   "homepage": "https://github.com/demns/samsonau.net#readme",
-  "dependencies": {
-  }
+  "engines": {  
+    "node": "4.2.x"  
+  }  
 }
