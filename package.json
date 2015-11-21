@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "./node_modules/jshint/bin/jshint server.js",
-    "start": "node server.js"
+    "start": "babel server.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,6 @@
     "jshint": "^2.7.0"
   },
   "devDependencies": {
-    "bower": "^1.4.1",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.1.0",
     "gulp-nodemon": "^2.0.3",

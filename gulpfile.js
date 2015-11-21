@@ -16,12 +16,6 @@ gulp.task('sass:watch', function() {
   gulp.watch('./sass/**/*.scss', ['sass']);
 });
 
-gulp.task("start", function() {
-  return gulp.src("server.js")
-    .pipe(babel())
-    .pipe(gulp.dest("dist"));
-});
-
 gulp.task('default', function gulpDefault() {
   runSequence(
     'start',
