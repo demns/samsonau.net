@@ -19,7 +19,8 @@
     "url": "https://github.com/demns/samsonau.net/issues"
   },
   "homepage": "https://github.com/demns/samsonau.net#readme",
-  "engines": {  
-    "node": "4.2.x"  
-  }  
+  "engines": {
+    "babel-node": "6.x.x"
+  },
+  "dependencies": {}
 }
