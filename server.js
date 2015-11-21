@@ -2,7 +2,7 @@
 const http = require('http');
 
 //Lets define a port we want to listen to
-const port = 8080; 
+const port = 1337; 
 
 //We need a function which handles requests and send response
 function handleRequest(request, response) {
