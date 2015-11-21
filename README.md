@@ -3,7 +3,8 @@ Main development repo for the website of mine
 
 #The technologies that will be used:
 
-- [x] Deploying on Azure
+- [ ] Deploying on Azure
+- [ ] Docker?
 - [x] EditorConfig
 - [ ] Sass
 - [ ] AngularJS
