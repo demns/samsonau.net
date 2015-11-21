@@ -117,6 +117,7 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   cd - > /dev/null
 fi
 
+eval npm i -g babel-node
 eval npm start
 
 ##################################################################################################################################
