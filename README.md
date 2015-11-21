@@ -7,8 +7,4 @@ Main development repo for the website of mine
 - [x] EditorConfig
 - [ ] Sass
 - [ ] AngularJS
-- [ ] MongoDB
-- [ ] Redis
 - [ ] ECMAScript 6 Features
-
-
