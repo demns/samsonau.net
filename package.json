@@ -4,6 +4,7 @@
   "description": "Samsonau.net",
   "main": "server.js",
   "scripts": {
+    "start": "babel-node ./server.js",    
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +20,7 @@
     "url": "https://github.com/demns/samsonau.net/issues"
   },
   "homepage": "https://github.com/demns/samsonau.net#readme",
-  "dependencies": {}
+  "dependencies": {
+    "babel": "4.7.16"
+  }
 }
