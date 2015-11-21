@@ -1,0 +1,27 @@
+{
+  "name": "samsonau.net",
+  "version": "1.0.0",
+  "description": "Samsonau.net",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node ./server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://demns@github.com/demns/samsonau.net.git"
+  },
+  "keywords": [
+    "samsonau.net"
+  ],
+  "author": "Dzmitry Samsonau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demns/samsonau.net/issues"
+  },
+  "homepage": "https://github.com/demns/samsonau.net#readme",
+  "dependencies": {
+    "babel": "^6.1.18",
+    "babel-cli": "^6.2.0"
+  }
+}
