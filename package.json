@@ -2,9 +2,8 @@
   "name": "samsonau.net",
   "version": "1.0.0",
   "description": "Samsonau.net",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
-    "start": "babel-node ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,7 +20,5 @@
   },
   "homepage": "https://github.com/demns/samsonau.net#readme",
   "dependencies": {
-    "babel": "^6.1.18",
-    "babel-cli": "^6.2.0"
   }
 }
