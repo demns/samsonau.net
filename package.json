@@ -2,7 +2,7 @@
   "name": "samsonau.net",
   "version": "1.0.0",
   "description": "Samsonau.net",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/demns/samsonau.net/issues"
   },
-  "homepage": "https://github.com/demns/samsonau.net#readme"
+  "homepage": "https://github.com/demns/samsonau.net#readme",
+  "dependencies": {
+    "babel": "^6.1.18",
+    "babel-core": "^6.2.1",
+    "express": "^4.13.3"
+  }
 }
