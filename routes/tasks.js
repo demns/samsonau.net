@@ -38,7 +38,7 @@ router.post('/', function(req, res, next) { // /tasks/{task_id}
     "id": parseInt(req.body.id),
     "title": req.body.title,
     "description": req.body.description,
-    "deadline": Date.now(),
+    "deadline": Date.now().toString(),
     "priority": "High",
     "category": {
       "id": parseInt(req.body.id),
@@ -51,6 +51,5 @@ router.post('/', function(req, res, next) { // /tasks/{task_id}
   
   res.send('Post done');
 });
-
 
 module.exports = router;
