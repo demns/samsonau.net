@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:id', function(req, res, next) { // /tasks/{task_id}
-	var id = parseInt(req.param('id'));
+	var id = parseInt(req.params.id);
 	var task = tasksData.filter(function(task) {
     return task.id === id; // filter out appropriate one
 	})[0];
