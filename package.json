@@ -1,7 +1,10 @@
 {
   "name": "samsonau.net",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "samsonau.net",
   "private": true,
+  "author": "Dzmitry Samsonau",
+  "license": "MIT",
   "scripts": {
     "start": "node ./bin/www"
   },
