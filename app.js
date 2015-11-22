@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 
 app.set('port', process.env.NODE_PORT || 1337);
 
-var server = app.listen(app.get('port'), 'localhost', function onStart() {
+var server = app.listen(app.get('port'), function onStart() {
   var host = server.address().address;
   var port = server.address().port;
 
