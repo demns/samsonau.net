@@ -12,8 +12,11 @@ Main development repo for the website of mine
 
 To start mongod:
 mongod --config /etc/mongod.conf
+
 To watch fork process:
 tail --f /datadrive/mongod.log
+
 To finish:
 ps ax | grep mongod
+
 and kill by PID
