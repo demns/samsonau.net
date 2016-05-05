@@ -8,8 +8,9 @@ app.get('*', function(req, res){
   res.sendFile(__dirname + '/public/index.html');
 });
 
-app.listen(1337, function () {
+app.listen(process.env.PORT || 1337, function () {
   console.log('Example app listening on port 1337!');
 });
 
 module.exports = app;
+
