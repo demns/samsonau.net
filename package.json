@@ -6,10 +6,11 @@
   "author": "Dzmitry Samsonau",
   "license": "MIT",
   "scripts": {
-    "start": "node app.js"
+    "start": "forever stopall && forever start app.js"
   },
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "forever": "^0.15.1"
   },
   "devDependencies": {
     "eslint": "^2.9.0"
