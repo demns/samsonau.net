@@ -4,6 +4,10 @@ var app = express();
 
 app.use(express.static('public'));
 
+app.get('/styles/style.css', function(req, res){
+  res.sendFile(__dirname + '/public/style.css');
+});
+
 app.get('*', function(req, res){
   res.sendFile(__dirname + '/public/index.html');
 });
