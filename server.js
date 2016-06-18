@@ -1,28 +1,23 @@
-var path = require('path');
 var express = require('express');
-var webpack = require('webpack');
-var config = require('./webpack.config.dev');
 
 var app = express();
-var compiler = webpack(config);
 
-var port = process.env.PORT || 1337;
+app.use(express.static('public'));
 
-app.use(require('webpack-dev-middleware')(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath
-}));
+app.get('/dist/bundle.js', function (req, res) {
+  res.sendFile(__dirname + '/dist/bundle.js');
+});
 
-app.use(require('webpack-hot-middleware')(compiler));
+app.get('/styles/style.css', function (req, res) {
+  res.sendFile(__dirname + '/public/style.css');
+});
 
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'index.html'));
+  res.sendFile(__dirname + '/index.html');
 });
 
-app.listen(port, function onAppListening(err) {
-  if (err) {
-    console.error(err);
-  } else {
-    console.info('==> 🚧  Webpack development server listening on port %s', port);
-  }
+app.listen(process.env.PORT || 1337, function () {
+  console.log('Example app listening on port 1337!');
 });
+
+module.exports = app;
