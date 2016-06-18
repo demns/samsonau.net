@@ -4,7 +4,7 @@ var webpack = require('webpack');
 var config = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
-    './app.js',
+    './app.jsx',
     'webpack-hot-middleware/client'
   ],
   output: {
@@ -20,7 +20,7 @@ var config = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
         loaders: ['babel'],
         exclude: /node_modules/
       }
