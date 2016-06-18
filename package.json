@@ -7,9 +7,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "node server.dev.js",
-    "clean": "rimraf dist",
-    "build:webpack": "webpack -p --progress --colors --config webpack.config.prod.js",
-    "build": "npm run clean && npm run build:webpack",
+    "clean": "rimraf dist && npm update",
+    "build": "webpack -p --progress --colors --config webpack.config.prod.js",
     "foreverStop": "forever stopall",
     "foreverStart": "forever start server.js",
     "start": "node server_azure.js"

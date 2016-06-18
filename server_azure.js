@@ -1,5 +1,5 @@
 const exec = require('child_process').exec;
-exec('npm run foreverStop && npm run build', (error, stdout, stderr) => {
+exec('npm run clean && npm run foreverStop', (error, stdout, stderr) => {
     if (error) {
         console.error(`exec error: ${error}`);
         return;
@@ -7,7 +7,7 @@ exec('npm run foreverStop && npm run build', (error, stdout, stderr) => {
     console.log(`stdout: ${stdout}`);
     console.log(`stderr: ${stderr}`);
 
-    exec('npm run foreverStart', (error, stdout, stderr) => {
+    exec('npm run build && npm run foreverStart', (error, stdout, stderr) => {
         if (error) {
             console.error(`exec error: ${error}`);
             return;
