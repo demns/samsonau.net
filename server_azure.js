@@ -1,19 +1,28 @@
-const exec = require('child_process').exec;
-exec('npm run clean && npm run foreverStop', (error, stdout, stderr) => {
-    if (error) {
-        console.error(`exec error: ${error}`);
-        return;
-    }
-    console.log(`stdout: ${stdout}`);
-    console.log(`stderr: ${stderr}`);
+var path = require('path');
+var express = require('express');
+var webpack = require('webpack');
+var config = require('./webpack.config.dev');
 
-    exec('npm run build && npm run foreverStart', (error, stdout, stderr) => {
-        if (error) {
-            console.error(`exec error: ${error}`);
-            return;
-        }
+var app = express();
+var compiler = webpack(config);
 
-        console.log(`stdout: ${stdout}`);
-        console.log(`stderr: ${stderr}`);
-    });
+var port = process.env.PORT || 1337;
+
+app.use(require('webpack-dev-middleware')(compiler, {
+  noInfo: true,
+  publicPath: config.output.publicPath
+}));
+
+app.use(require('webpack-hot-middleware')(compiler));
+
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.listen(port, function onAppListening(err) {
+  if (err) {
+    console.error(err);
+  } else {
+    console.info('==> 🚧  Webpack development server listening on port %s', port);
+  }
 });
