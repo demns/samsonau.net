@@ -1,20 +1,23 @@
-const exec = require('child_process').exec;
-const path = "D:\\Program Files (x86)\\npm\\4.1.2\\";
-exec(path + ' run clean' + path + ' npm run foreverStop', (error, stdout, stderr) => {
-  if (error) {
-    console.error(`exec error: ${error}`);
-    return;
-  }
-  console.log(`stdout: ${stdout}`);
-  console.log(`stderr: ${stderr}`);
+var express = require('express');
 
-  exec(path + 'npm run build &&' + path + ' npm run foreverStart', (error, stdout, stderr) => {
-    if (error) {
-      console.error(`exec error: ${error}`);
-      return;
-    }
+var app = express();
 
-    console.log(`stdout: ${stdout}`);
-    console.log(`stderr: ${stderr}`);
-  });
+app.use(express.static('public'));
+
+app.get('/dist/bundle.js', function (req, res) {
+  res.sendFile(__dirname + '/dist/bundle.js');
 });
+
+app.get('/styles/style.css', function (req, res) {
+  res.sendFile(__dirname + '/public/style.css');
+});
+
+app.get('*', function (req, res) {
+  res.sendFile(__dirname + '/index.html');
+});
+
+app.listen(process.env.PORT || 1337, function () {
+  console.log('Example app listening on port 1337!');
+});
+
+module.exports = app;
