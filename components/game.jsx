@@ -19,18 +19,18 @@ export default class Game extends Component {
   messageReceived(event) {
     console.log(event.data);
     this.setState(() => ({
-      messages: event.data,
+      messages: this.state.messages + event.data,
     }));
   }
 
   writeToWS() {
+    // <div onClick={this.writeToWS}>Write To ws</div>
     this.exampleSocket.send("hello, world");
   }
 
   render() {
     return <div>
-      <span>{this.state.messages}</span>
-      <div onClick={this.writeToWS}>Write To ws</div>
+      <span dangerouslySetInnerHTML={{__html: this.state.messages}}></span>
     </div>;
   }
 }

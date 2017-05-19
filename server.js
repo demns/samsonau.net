@@ -25,7 +25,15 @@ wss.on('connection', function connection(ws) {
     console.log('received: %s', message);
   });
 
-  ws.send('something');
+  var first = '<a href="mailto:dzmitrysamsonau@gmail.com">dzmitrysamsonau@gmail.com</a>';
+  var links = [first, first];
+
+  for (var i = 0; i < links.length; i++) {
+    var charPos = 0;
+    setInverval(function() {
+      ws.send(links[charPos++]);
+    }, 100);
+  }
 });
 
 app.listen(process.env.PORT || 1337, function () {
