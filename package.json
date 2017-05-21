@@ -44,7 +44,6 @@
     "whatwg-fetch": "2.0.3"
   },
   "dependencies": {
-    "concurrently": "^3.4.0",
     "npm-run-all": "^4.0.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
