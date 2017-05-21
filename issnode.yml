@@ -1,2 +1,3 @@
+debuggingEnabled: false
 loggingEnabled: true
 logDirectory: iisnode
