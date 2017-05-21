@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
-export default class Game extends Component {
+export default class DynamicLinks extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       messages: [],
     };
+
     this.messageReceived = this.messageReceived.bind(this);
     this.writeToWS = this.writeToWS.bind(this);
   }
@@ -17,7 +18,6 @@ export default class Game extends Component {
   }
 
   messageReceived(event) {
-    console.log(event.data);
     this.setState(() => ({
       messages: this.state.messages + event.data,
     }));
@@ -29,10 +29,8 @@ export default class Game extends Component {
   }
 
   render() {
-    return <div>
-      <span dangerouslySetInnerHTML={{__html: this.state.messages}}></span>
+    return <div className="samsonau__links">
+      <span dangerouslySetInnerHTML={{ __html: this.state.messages }}></span>
     </div>;
   }
 }
-
-

@@ -1,0 +1,14 @@
+body {
+  margin: 1rem;
+  font-family: sans-serif;
+}
+
+.samsonau {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.samsonau__links {
+  margin: 1rem;
+}
