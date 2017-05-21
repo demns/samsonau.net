@@ -45,15 +45,19 @@
   },
   "dependencies": {
     "concurrently": "^3.4.0",
+    "npm-run-all": "^4.0.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "serve": "^5.1.5",
     "ws": "^3.0.0"
   },
   "scripts": {
-    "start": "concurrently \"node scripts/start.js\" \"node scripts/server.js\"",
-    "serve": "concurrently \"serve -s build\" \"node scripts/server.js\"",
     "build": "node scripts/build.js",
+    "dev": "npm-run-all --parallel start:ws start:dev",
+    "start": "node \"node_modules\\npm-run-all\\bin\\npm-run-all\\index.js\" -p start:ws start:serve",
+    "start:dev": "node scripts/start.js",
+    "start:serve": "serve -s build",
+    "start:ws": "node scripts/websockets.js",
     "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
